@@ -4,25 +4,23 @@ import { HardhatUserConfig } from "hardhat/config";
 dotenv.config();
 
 const config: HardhatUserConfig = {
-  solidity: {
-    compilers: [
-      {
-        version: "0.8.12",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200,
-          },
-        },
-      },
-    ],
-  },
   networks: {
+    //   localhost: {
+    //     url: process.env.HOST_URL,
+    //     forking: {
+    //       url: process.env.ARBITRUM_RPC || "",
+    //       blockNumber: 88911760, // (May-09-2023 12:26:03 PM +UTC)
+    //     },
+    //     loggingEnabled: true,
+    //     chainId: 42161,
+    //     accounts: [process.env.DEV_KEY],
+    //   },
     hardhat: {
       forking: {
         url: process.env.ARBITRUM_RPC || "",
-        blockNumber: 88537092, // (May-08-2023 09:59:25 AM +UTC)
+        blockNumber: 88911760, // (May-09-2023 12:26:03 PM +UTC)
       },
+
       loggingEnabled: true,
       chainId: 42161,
       accounts: [
