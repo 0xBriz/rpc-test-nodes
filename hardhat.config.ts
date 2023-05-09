@@ -22,6 +22,7 @@ const config: HardhatUserConfig = {
       },
 
       loggingEnabled: true,
+      allowUnlimitedContractSize: true,
       chainId: 42161,
       accounts: [
         {
